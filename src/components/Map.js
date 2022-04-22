@@ -6,7 +6,10 @@ import { data } from "../App";
 const maptilerProvider = maptiler("datlaePY7Ksenqv76WTM", "streets");
 
 const Mapa = () => {
-  const [center, setCenter] = useState(data.coordinates);
+  const [center, setCenter] = useState([
+    parseFloat(data.coordinates[0]),
+    parseFloat(data.coordinates[1]),
+  ]);
   const [zoom, setZoom] = useState(11);
 
   return (
@@ -15,12 +18,19 @@ const Mapa = () => {
       dprs={[1, 2]}
       center={center}
       zoom={zoom}
-      onBoundsChanged={({ center, zoom }) => {
+      /* onBoundsChanged={({ center, zoom }) => {
         setCenter(center);
         setZoom(zoom);
-      }}
+      }} */
     >
-      <Marker width={50} anchor={data.coordinates} onClick={() => {}} />
+      <Marker
+        width={50}
+        anchor={[
+          parseFloat(data.coordinates[0]),
+          parseFloat(data.coordinates[1]),
+        ]}
+        onClick={() => {}}
+      />
       <ZoomControl />
     </Map>
   );
