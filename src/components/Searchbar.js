@@ -13,16 +13,13 @@ export default function Searchbar({ changeData }) {
       })
       .catch((error) => console.log('Error: ', error));
   }
-
   const handleChange = (e) => {
     setUserInput(e.target.value);
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     fetchData();
   };
-
   return (
     <>
       <div className='nav'>

@@ -5,7 +5,7 @@ import useLocation from "../hooks/useLocation";
 
 const maptilerProvider = maptiler('datlaePY7Ksenqv76WTM', 'streets');
 
-const Mapa = () => {
+const Mapa = ({data}) => {
   const location = useLocation();
   const [zoom, setZoom] = useState(11);
 
@@ -13,15 +13,11 @@ const Mapa = () => {
     <Map
       provider={maptilerProvider}
       dprs={[1, 2]}
-      center={location}
+      center={data? data.coordinates:location}
       height={500}
       zoom={zoom}
-      /* onBoundsChanged={({ center, zoom }) => {
-    setCenter(center);
-    setZoom(zoom);
-  }} */
     >
-      <Marker width={50} anchor={location} onClick={() => {}} />
+      <Marker width={50} anchor={data? data.coordinates:location} />
       <ZoomControl />
     </Map>
   ) : (

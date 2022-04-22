@@ -9,9 +9,6 @@ const Home = () => {
   function changeData(value) {
     setData(value);
   }
-
-  console.log('DATA:', data);
-
   return (
     <div className='row'>
       <div className='col'>
