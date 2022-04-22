@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Searchbar from './Searchbar';
 import Sidebar from './sidebar';
-import Mapa from './Map';
+import Map from './Map';
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -21,7 +21,7 @@ const Home = () => {
             <Sidebar />
           </div>
           <div className='col'>
-            <Mapa />
+            <Map data={data} />
           </div>
         </div>
       </div>

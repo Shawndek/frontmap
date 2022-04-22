@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { Map, Marker, ZoomControl } from "pigeon-maps";
-import { maptiler } from "pigeon-maps/providers";
-import { data } from "../App";
+import React, { useState } from 'react';
+import { Map, Marker, ZoomControl } from 'pigeon-maps';
+import { maptiler } from 'pigeon-maps/providers';
+// import { data } from "../App";
 
-const maptilerProvider = maptiler("datlaePY7Ksenqv76WTM", "streets");
+const maptilerProvider = maptiler('datlaePY7Ksenqv76WTM', 'streets');
 
-const Mapa = () => {
+const Mapa = ({ data }) => {
   const [center, setCenter] = useState(data.coordinates);
   const [zoom, setZoom] = useState(11);
 
