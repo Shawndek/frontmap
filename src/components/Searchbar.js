@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Map from './Map';
+import React, { useState, } from 'react';
 import '../styles/searchbar.css';
 import axios from 'axios';
 
@@ -29,6 +28,7 @@ export default function Searchbar({ changeData }) {
               type='text'
               placeholder='Search for a place...'
               onChange={(e) => handleChange(e)}
+              
             />
             <button className='search-button' onClick={handleSubmit}>
               Search

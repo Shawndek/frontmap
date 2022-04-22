@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Searchbar from './Searchbar';
-import Sidebar from './sidebar';
+import Sidebar from './Sidebar';
 import Mapa from './Map';
 
 const Home = () => {
