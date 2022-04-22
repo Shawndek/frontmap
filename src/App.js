@@ -1,5 +1,5 @@
 import { Route, Routes, } from 'react-router-dom';
-import Home from './components/home.js'
+import Home from './components/Home.js'
 
 
 export const [data] = 
