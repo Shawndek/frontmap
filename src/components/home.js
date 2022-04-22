@@ -19,10 +19,10 @@ console.log(data)
         <Searchbar changeData={changeData} />
         <div className='row-9'>
           <div className='col-3'>
-            <Sidebar />
+            <Sidebar data={data}/>
           </div>
           <div className='col'>
-            <Mapa />
+            <Mapa data={data}/>
           </div>
         </div>
       </div>
