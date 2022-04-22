@@ -13,25 +13,14 @@ const Home = () => {
   console.log("DATA:", data);
 
   return (
-<<<<<<< HEAD
     <div className="row">
       <div className="col">
-        <Searchbar />
+        <Searchbar changeData={changeData} />
         <div className="row">
           <div className="col-3">
             <Sidebar />
           </div>
           <div className="col">
-=======
-    <div className='row'>
-      <div className='col'>
-        <Searchbar changeData={changeData} />
-        <div className='row'>
-          <div className='col-3'>
-            <Sidebar />
-          </div>
-          <div className='col'>
->>>>>>> e5036dd3de629c8777a6187cc3235c19a1c7997e
             <Mapa />
           </div>
         </div>
