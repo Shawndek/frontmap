@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Shawndek.github.io/frontmap/static/css/main.16fce9a2.css",
+    "main.js": "/Shawndek.github.io/frontmap/static/js/main.3c071ee9.js",
+    "index.html": "/Shawndek.github.io/frontmap/index.html",
+    "main.16fce9a2.css.map": "/Shawndek.github.io/frontmap/static/css/main.16fce9a2.css.map",
+    "main.3c071ee9.js.map": "/Shawndek.github.io/frontmap/static/js/main.3c071ee9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.16fce9a2.css",
+    "static/js/main.3c071ee9.js"
+  ]
+}
