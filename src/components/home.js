@@ -1,18 +1,28 @@
-import React from "react";
+
+import React, { useState } from "react";
+import Searchbar from "./Searchbar";
 import Sidebar from "./sidebar";
 import Mapa from "./Map";
 
-const home = () => {
+const Home = () => {
+  const [data, setData] = useState();
+
+  function changeData(data) {
+    setData(data);
+  }
+
+
   return (
-    <div class="row">
-      <div class="col">
-        Navbar
-        <div class="row">
-          <div class="col-3">
-            <Sidebar />
-          </div>
-          <div class="col">
-            <Mapa />
+    <div className="row">
+      
+      <div className="col">
+        <Searchbar />
+        <div className="row">
+          <div className="col-3">
+             <Sidebar />
+          </div>          
+          <div className="col">
+             <Mapa />
           </div>
         </div>
       </div>
@@ -20,4 +30,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;
