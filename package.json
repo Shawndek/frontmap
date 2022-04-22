@@ -17,11 +17,8 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-<<<<<<< HEAD
     "uuid": "^8.3.2",
-=======
     "styled-components": "^5.3.5",
->>>>>>> 5a1bd53ed4d6f7c9df6505f6521517cb7eddc2dc
     "web-vitals": "^2.1.4"
   },
   "scripts": {
