@@ -2,8 +2,8 @@ import React from "react";
 //import { data } from "../App";
 
 const Sidebar = (data) => {
-
-  return (
+ if(data) {return(<></>)}
+ else {return (
 <div className="list-group w-100">
   <a href="#" className="list-group-item list-group-item-action" aria-current="true">
     <div className="d-flex w-100 justify-content-start">
@@ -17,6 +17,6 @@ const Sidebar = (data) => {
     <p>{data.adress.region}</p></small>
   </a>
 </div>
-)};
+)}};
 
 export default Sidebar;
