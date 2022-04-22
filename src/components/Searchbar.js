@@ -23,7 +23,6 @@ export default function Searchbar() {
           {data
             .filter((place) => {
               if (search === "") {
-                return place;
               } else if (
                 place.name.toLowerCase().includes(search.toLowerCase())
               ) {
