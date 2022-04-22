@@ -35,10 +35,7 @@ const Sidebar = ({ data }) => {
       <div className='list-group w-100'>
         <div className='list-group-item list-group-item-action'
           aria-current='true'>
-        <a href={data.wikiLink}
-          className='list-group-item list-group-item-action'
-          aria-current='true'
-        >
+        <a href={data.wikiLink} target="_blank" rel='noopener noreferrer'>
           <div className='d-flex w-100 justify-content-start'>
             <h5 className='mb-1'>{data.name}</h5>
           </div>
