@@ -1,34 +1,25 @@
 import React from "react";
+import { data } from "../App";
 
 const Sidebar = () => {
 
   return (
-<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small>3 days ago</small>
+<div class="list-group w-100">
+  <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-start">
+      <h5 class="mb-1">{data.name}</h5>
     </div>
-    <p class="mb-1">Some placeholder content in a paragraph.</p>
-    <small>And some small print.</small>
+    <img class="d-flex w-100 justify-content-start" src={data.img} alt={data.name}/>
+   <p class="mb-1"> {data.description}
+   <a href={data.wikiLink}>Learn more </a></p>
+    <small><p></p><p>{data.adress.zipcode} {data.adress.city}</p>
+    <p>{data.adress.street}</p>
+    <p>{data.adress.region}</p></small>
+    
   </a>
-  <a href="#" class="list-group-item list-group-item-action">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
-    </div>
-    <p class="mb-1">Some placeholder content in a paragraph.</p>
-    <small class="text-muted">And some muted small print.</small>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
-    </div>
-    <p class="mb-1">Some placeholder content in a paragraph.</p>
-    <small class="text-muted">And some muted small print.</small>
-  </a>
+  
 </div>
+
    )};
 
 export default Sidebar;
