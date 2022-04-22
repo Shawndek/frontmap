@@ -1,12 +1,18 @@
+import { Route, Routes, } from 'react-router-dom';
+import Home from './components/Home'
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Test</h1>
-      </header>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Home />}/>
+          <Route path='*' element={<div>NotFound</div>}/>
+        </Route>
+      </Routes>
     </div>
   );
 }
 
 export default App;
+
