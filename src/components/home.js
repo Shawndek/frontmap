@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Mapa from "./Map";
 
 const home = () => {
   return (
     <div>
-      Test
+      <Mapa />
     </div>
-  )
-}
+  );
+};
 
-export default home
+export default home;
