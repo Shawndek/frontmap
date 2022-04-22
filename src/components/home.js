@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Searchbar from './Searchbar';
 import Sidebar from './sidebar';
-import Mapa from './Map';
+import Map from './Map';
 
 const Home = () => {
   const [data, setData] = useState(false);
@@ -20,8 +20,8 @@ const Home = () => {
           <div className='col-3'>
             <Sidebar data={data} />
           </div>
-          <div className='col' style={{ minHeight: '20rem' }}>
-            <Mapa />
+          <div className='col'>
+            <Map data={data} />
           </div>
         </div>
       </div>
