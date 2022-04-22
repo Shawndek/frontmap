@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import { Map, Marker, ZoomControl } from "pigeon-maps";
 import { maptiler } from "pigeon-maps/providers";
 import { data } from "../App";
+import CurrentLocation from "./IP";
 
 const maptilerProvider = maptiler("datlaePY7Ksenqv76WTM", "streets");
 
 const Mapa = () => {
-  const [center, setCenter] = useState([
-    parseFloat(data.coordinates[0]),
-    parseFloat(data.coordinates[1]),
-  ]);
+  const [center, setCenter] = useState(/* [location.lat, location.lng] */);
   const [zoom, setZoom] = useState(11);
 
   return (

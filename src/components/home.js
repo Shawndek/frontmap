@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Searchbar from "./Searchbar";
 import Sidebar from "./sidebar";
@@ -11,18 +10,16 @@ const Home = () => {
     setData(data);
   }
 
-
   return (
     <div className="row">
-      
       <div className="col">
         <Searchbar />
         <div className="row">
           <div className="col-3">
-             <Sidebar />
-          </div>          
+            <Sidebar />
+          </div>
           <div className="col">
-             <Mapa />
+            <Mapa />
           </div>
         </div>
       </div>
