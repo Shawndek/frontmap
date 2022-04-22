@@ -1,28 +1,30 @@
 import React, { useState } from "react";
 import { Map, Marker, ZoomControl } from "pigeon-maps";
 import { maptiler } from "pigeon-maps/providers";
-import { data } from "../App";
+import useLocation from "../hooks/useLocation";
 
 const maptilerProvider = maptiler("datlaePY7Ksenqv76WTM", "streets");
 
 const Mapa = () => {
-  const [center, setCenter] = useState(data.coordinates);
+  const location = useLocation();
   const [zoom, setZoom] = useState(11);
 
-  return (
+  return location ? (
     <Map
       provider={maptilerProvider}
       dprs={[1, 2]}
-      center={center}
+      center={location}
       zoom={zoom}
-      onBoundsChanged={({ center, zoom }) => {
-        setCenter(center);
-        setZoom(zoom);
-      }}
+      /* onBoundsChanged={({ center, zoom }) => {
+    setCenter(center);
+    setZoom(zoom);
+  }} */
     >
-      <Marker width={50} anchor={data.coordinates} onClick={() => {}} />
+      <Marker width={50} anchor={location} onClick={() => {}} />
       <ZoomControl />
     </Map>
+  ) : (
+    "Loading"
   );
 };
 
