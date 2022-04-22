@@ -1,9 +1,22 @@
 import React from 'react'
+import Sidebar from './sidebar'
 
 const home = () => {
   return (
-    <div>
-      Test
+    <div class="row">
+      
+      <div class="col">
+        Navbar
+        <div class="row">
+          <div class="col">
+             <Sidebar />
+          </div>          
+          <div class="col">
+             Map
+          </div>
+        </div>
+       
+      </div>
     </div>
   )
 }
