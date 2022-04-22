@@ -1,20 +1,20 @@
-
-import React, { useState } from "react";
-import Searchbar from "./Searchbar";
-import Sidebar from "./sidebar";
-import Mapa from "./Map";
+import React, { useState } from 'react';
+import Searchbar from './Searchbar';
+import Sidebar from './sidebar';
+import Mapa from './Map';
 
 const Home = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
 
-  function changeData(data) {
-    setData(data);
+  function changeData(value) {
+    setData(value);
   }
 
+  console.log('DATA:', data);
 
   return (
-    <div className="row">
-      
+
+    <div className="row"> 
       <div className="col">
         <Searchbar />
         <div className="row">
