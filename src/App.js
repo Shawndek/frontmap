@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-import { Route, Routes, } from 'react-router-dom';
-import Home from "./components/home"
-=======
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/home';
 import { v4 as uuidv4 } from 'uuid';
 
-export const [data] = [
+export const [mockData] = [
   {
     name: 'WBS Coding School',
     id: uuidv4(),
@@ -23,7 +19,6 @@ export const [data] = [
       'Skip years of studying and become a Web Developer, Data Scientist or Digital Product Designer from scratch.',
   },
 ];
->>>>>>> e2022ce0947df387f1b3a483c85a2a5b8a8cfbc5
 
 const App = () => {
   return (

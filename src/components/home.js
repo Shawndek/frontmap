@@ -10,11 +10,11 @@ const Home = () => {
     setData(value);
   }
 
-  console.log("DATA:", data);
+  console.log('DATA:', data);
 
   return (
-    <div className="row">
-      <div className="col">
+    <div className='row'>
+      <div className='col'>
         <Searchbar changeData={changeData} />
         <div className='row-9'>
           <div className='col-3'>
