@@ -5,17 +5,16 @@ import Sidebar from "./sidebar";
 import Mapa from "./Map";
 
 const Home = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
 
   function changeData(data) {
     setData(data);
   }
 
-
   return (
     <div class="row">
       <div class="col">
-        <Searchbar changeData={changeData}/>
+        <Searchbar changeData={changeData} data={data}/>
         <div class="row">
           <div class="col-3">
             <Sidebar />

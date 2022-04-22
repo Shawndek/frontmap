@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Map from "./Map";
 import "../styles/searchbar.css";
-import data from "../MOCK_DATA.json";
 
-export default function Searchbar({changeData}) {
-  const [search, setSearch] = useState("");
+export default function Searchbar({changeData, data}) {
+  const [userInput, setUserInput] = useState("");
+
+useEffect(() => {
+  fetch(`https://crossover-2.herokuapp.com/search/${userInput}`)
+        .then(response => response.json())
+        .then(data => setUserInput(data))
+        .catch(error => console.log('Error: ', error))}, [userInput]);
 
   const handleChange = (e) => {
-    setSearch(e.target.value);
+    setUserInput(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    changeData(fetch(userInput).data);
   };
 
   return (
@@ -19,21 +30,13 @@ export default function Searchbar({changeData}) {
               placeholder="Search for a place..."
               onChange={(e) => handleChange(e)}
             />
-            <button className="search-button" onClick={changeData}>Search</button>
+            <button className="search-button" onClick={handleSubmit}>Search</button>
           </div>
-          {data
-            .filter((place) => {
-              if (
-                search !== "" &&
-                place.name.toLowerCase().includes(search.toLowerCase())
-              ) {
-                return place;
-              }
-            })
-            .map((place) => (
-              <div>
-                <h1>{place.name}</h1>
-              </div>
+          {data.map((place) => (
+              <Map 
+              key={place.id}
+              name={place.name}
+              />
             ))}
         </div>
         <div className="header">
