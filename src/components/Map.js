@@ -14,7 +14,7 @@ const Mapa = () => {
       provider={maptilerProvider}
       dprs={[1, 2]}
       center={location}
-      height="500px"
+      height={500}
       zoom={zoom}
       /* onBoundsChanged={({ center, zoom }) => {
     setCenter(center);

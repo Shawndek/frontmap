@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const useLocation = () => {
   const [location, setLocation] = useState(null);
@@ -17,7 +17,7 @@ const useLocation = () => {
         setLocation([lat, lng]);
       };
       try {
-        if ("geolocation" in navigator) {
+        if ('geolocation' in navigator) {
           navigator.geolocation.getCurrentPosition(
             (pos) => setLocation([pos.coords.latitude, pos.coords.longitude]),
             async () => await getFromIpify()
