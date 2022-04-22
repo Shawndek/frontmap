@@ -12,16 +12,15 @@ const Home = () => {
 
   console.log('DATA:', data);
 
-console.log(data)
   return (
     <div className='row'>
       <div className='col'>
         <Searchbar changeData={changeData} />
         <div className='row-9'>
           <div className='col-3'>
-            <Sidebar />
+            <Sidebar data={data} />
           </div>
-          <div className='col'>
+          <div className='col' style={{ minHeight: '20rem' }}>
             <Mapa />
           </div>
         </div>
