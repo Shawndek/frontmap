@@ -3,7 +3,7 @@ import { Map, Marker, ZoomControl } from "pigeon-maps";
 import { maptiler } from "pigeon-maps/providers";
 import useLocation from "../hooks/useLocation";
 
-const maptilerProvider = maptiler("datlaePY7Ksenqv76WTM", "streets");
+const maptilerProvider = maptiler('datlaePY7Ksenqv76WTM', 'streets');
 
 const Mapa = () => {
   const location = useLocation();
@@ -14,6 +14,7 @@ const Mapa = () => {
       provider={maptilerProvider}
       dprs={[1, 2]}
       center={location}
+      height={500}
       zoom={zoom}
       /* onBoundsChanged={({ center, zoom }) => {
     setCenter(center);
