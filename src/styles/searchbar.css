@@ -13,4 +13,13 @@
   padding: 0.5rem 5rem 0.5rem 1rem;
   font-size: 1rem;
   background-color: rgba(128, 128, 128, 0.231);
+  margin-right: 0.7rem;
+}
+
+.search-button {
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: rgba(12, 149, 33, 0.492);
 }

@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
-import  '../styles/searchbar.css';
-import data from '../MOCK_DATA.json';
+import React, { useState } from "react";
+import "../styles/searchbar.css";
+import data from "../MOCK_DATA.json";
 
-export default function Searchbar() {
-    const [search, setSearch] = useState('');
+export default function Searchbar({changeData}) {
+  const [search, setSearch] = useState("");
 
-    const handleChange = (e) => {
-        setSearch(e.target.value);
-    }
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
 
   return (
     <>
@@ -17,13 +17,14 @@ export default function Searchbar() {
             <input
               type="text"
               placeholder="Search for a place..."
-              onChange={handleChange}
+              onChange={(e) => handleChange(e)}
             />
+            <button className="search-button" onClick={changeData}>Search</button>
           </div>
           {data
             .filter((place) => {
-              if (search === "") {
-              } else if (
+              if (
+                search !== "" &&
                 place.name.toLowerCase().includes(search.toLowerCase())
               ) {
                 return place;

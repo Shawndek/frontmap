@@ -1,21 +1,28 @@
-import React from 'react'
-import Searchbar from './Searchbar';
-import Sidebar from './sidebar'
+import React, { useState } from "react";
+import Searchbar from "./Searchbar";
+import Sidebar from "./sidebar";
 
-const home = () => {
+const Home = () => {
+  const [data, setData] = useState();
+
+  function changeData(data) {
+    setData(data);
+  }
+
   return (
     <div class="row">
       <div class="col">
-        <Searchbar />
+        <Searchbar changeData={changeData}/>
         <div class="row">
-          <div class="col">
+          <div class="col-3">
             <Sidebar />
           </div>
+          <div class="col">Map</div>
           <div class="col">Map</div>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default home
+export default Home;
