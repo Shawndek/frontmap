@@ -3,7 +3,7 @@ import Map from './Map';
 import '../styles/searchbar.css';
 import axios from 'axios';
 
-export default function Searchbar({ changeData, data }) {
+export default function Searchbar({ changeData }) {
   const [userInput, setUserInput] = useState('');
 
   function fetchData() {
@@ -37,9 +37,6 @@ export default function Searchbar({ changeData, data }) {
               Search
             </button>
           </div>
-          {data.map((place) => (
-            <Map key={place.id} name={place.name} />
-          ))}
         </div>
         <div className='header'>
           <h1>CrossoverMap</h1>

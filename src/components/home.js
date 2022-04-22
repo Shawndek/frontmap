@@ -1,8 +1,7 @@
-
-import React, { useState } from "react";
-import Searchbar from "./Searchbar";
-import Sidebar from "./sidebar";
-import Mapa from "./Map";
+import React, { useState } from 'react';
+import Searchbar from './Searchbar';
+import Sidebar from './sidebar';
+import Mapa from './Map';
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -12,14 +11,14 @@ const Home = () => {
   }
 
   return (
-    <div class="row">
-      <div class="col">
-        <Searchbar changeData={changeData} data={data}/>
-        <div class="row">
-          <div class="col-3">
+    <div class='row'>
+      <div class='col'>
+        <Searchbar changeData={changeData} />
+        <div class='row'>
+          <div class='col-3'>
             <Sidebar />
           </div>
-          <div class="col">
+          <div class='col'>
             <Mapa />
           </div>
         </div>
