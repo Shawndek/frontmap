@@ -13,16 +13,15 @@ const Home = () => {
   console.log('DATA:', data);
 
   return (
-
-    <div className="row"> 
-      <div className="col">
-        <Searchbar />
-        <div className="row">
-          <div className="col-3">
-             <Sidebar />
-          </div>          
-          <div className="col">
-             <Mapa />
+    <div className='row'>
+      <div className='col'>
+        <Searchbar changeData={changeData} />
+        <div className='row'>
+          <div className='col-3'>
+            <Sidebar />
+          </div>
+          <div className='col'>
+            <Mapa />
           </div>
         </div>
       </div>
