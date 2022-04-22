@@ -6,9 +6,11 @@ import Mapa from './Map';
 const Home = () => {
   const [data, setData] = useState([]);
 
-  function changeData(data) {
-    setData(data);
+  function changeData(value) {
+    setData(value);
   }
+
+  console.log('DATA:', data);
 
   return (
     <div class='row'>
