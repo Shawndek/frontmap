@@ -14,7 +14,7 @@ const Mapa = ({data}) => {
       provider={maptilerProvider}
       dprs={[1, 2]}
       center={data? data.coordinates:location}
-      height={500}
+      height={window.innerHeight - 100}
       zoom={zoom}
     >
       <Marker width={50} anchor={data? data.coordinates:location} />
