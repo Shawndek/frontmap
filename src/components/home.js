@@ -16,7 +16,7 @@ const Home = () => {
     <div className='row'>
       <div className='col'>
         <Searchbar changeData={changeData} />
-        <div className='row-9'>
+        <div className='row'>
           <div className='col-3'>
             <Sidebar data={data} />
           </div>
