@@ -1,12 +1,21 @@
-import React from "react";
+
+import React, { useState } from "react";
+import Searchbar from "./Searchbar";
 import Sidebar from "./sidebar";
 import Mapa from "./Map";
 
-const home = () => {
+const Home = () => {
+  const [data, setData] = useState();
+
+  function changeData(data) {
+    setData(data);
+  }
+
+
   return (
     <div class="row">
       <div class="col">
-        Navbar
+        <Searchbar changeData={changeData}/>
         <div class="row">
           <div class="col-3">
             <Sidebar />
@@ -20,4 +29,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;
