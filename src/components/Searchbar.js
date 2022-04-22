@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-// import SearchbarStyle from '../styles/searchbar.css';
+import  '../styles/searchbar.css';
 import data from '../MOCK_DATA.json';
 
 export default function Searchbar() {
@@ -11,22 +11,35 @@ export default function Searchbar() {
 
   return (
     <>
-    <div>
-        <input type="text" placeholder="Search..." onChange={handleChange}/>
-        {data.filter((place) => {
-            if (search === "") {
-                return place
-            } else if (place.name.toLowerCase().includes(search.toLowerCase()))
-            {
-                return place
-            }
-        }).map((place) => (
-            <div>
+      <div className="nav">
+        <div className="search">
+          <div className="searchbar">
+            <input
+              type="text"
+              placeholder="Search for a place..."
+              onChange={handleChange}
+            />
+          </div>
+          {data
+            .filter((place) => {
+              if (search === "") {
+                return place;
+              } else if (
+                place.name.toLowerCase().includes(search.toLowerCase())
+              ) {
+                return place;
+              }
+            })
+            .map((place) => (
+              <div>
                 <h1>{place.name}</h1>
-            </div>)
-        )}
-    </div>
-      <h1>CrossoverMap</h1>
+              </div>
+            ))}
+        </div>
+        <div className="header">
+          <h1>CrossoverMap</h1>
+        </div>
+      </div>
     </>
   );
 }
