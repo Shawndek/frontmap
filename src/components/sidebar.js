@@ -5,11 +5,9 @@ const Sidebar = ({ data }) => {
   if (!data) {
     return (
       <div className='list-group w-100'>
-        <a
-          href='#'
-          className='list-group-item list-group-item-action'
-          aria-current='true'
-        >
+        <div className='list-group-item list-group-item-action'
+          aria-current='true'>
+        <a href={mockData.wikiLink} >
           <div className='d-flex w-100 justify-content-start'>
             <h5 className='mb-1'>{mockData.name}</h5>
           </div>
@@ -17,10 +15,9 @@ const Sidebar = ({ data }) => {
             className='d-flex w-100 justify-content-start'
             src={mockData.img}
             alt={mockData.name}
-          />
+          /></a>
           <p className='mb-1'>
             {mockData.description}
-            <a href={mockData.wikiLink}>Learn more </a>
           </p>
           <small>
             <p></p>
@@ -30,14 +27,15 @@ const Sidebar = ({ data }) => {
             <p>{mockData.adress.street}</p>
             <p>{mockData.adress.region}</p>
           </small>
-        </a>
+        </div>
       </div>
     );
   } else {
     return (
       <div className='list-group w-100'>
-        <a
-          href='#'
+        <div className='list-group-item list-group-item-action'
+          aria-current='true'>
+        <a href={data.wikiLink}
           className='list-group-item list-group-item-action'
           aria-current='true'
         >
@@ -48,10 +46,9 @@ const Sidebar = ({ data }) => {
             className='d-flex w-100 justify-content-start'
             src={data.img}
             alt={data.name}
-          />
+          /></a>
           <p className='mb-1'>
             {data.description}
-            <a href={data.wikiLink}>Learn more </a>
           </p>
           <small>
             <p></p>
@@ -61,7 +58,7 @@ const Sidebar = ({ data }) => {
             <p>{data.adress.street}</p>
             <p>{data.adress.region}</p>
           </small>
-        </a>
+        </div>
       </div>
     );
   }
