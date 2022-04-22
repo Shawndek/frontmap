@@ -5,7 +5,7 @@ import { data } from "../App";
 
 const maptilerProvider = maptiler("datlaePY7Ksenqv76WTM", "streets");
 
-const Mapa = () => {
+const Mapa = (data) => {
   const [center, setCenter] = useState(data.coordinates);
   const [zoom, setZoom] = useState(11);
 
@@ -15,10 +15,10 @@ const Mapa = () => {
       dprs={[1, 2]}
       center={center}
       zoom={zoom}
-      onBoundsChanged={({ center, zoom }) => {
+   /* onBoundsChanged={({ center, zoom }) => {
         setCenter(center);
         setZoom(zoom);
-      }}
+      }} */
     >
       <Marker width={50} anchor={data.coordinates} onClick={() => {}} />
       <ZoomControl />

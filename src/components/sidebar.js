@@ -1,7 +1,7 @@
 import React from "react";
-import { data } from "../App";
+//import { data } from "../App";
 
-const Sidebar = () => {
+const Sidebar = (data) => {
 
   return (
 <div className="list-group w-100">
@@ -15,11 +15,8 @@ const Sidebar = () => {
     <small><p></p><p>{data.adress.zipcode} {data.adress.city}</p>
     <p>{data.adress.street}</p>
     <p>{data.adress.region}</p></small>
-    
   </a>
-  
 </div>
-
-   )};
+)};
 
 export default Sidebar;
