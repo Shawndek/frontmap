@@ -3,15 +3,15 @@ import Sidebar from './sidebar'
 
 const home = () => {
   return (
-    <div class="row">
+    <div className="row">
       
-      <div class="col">
+      <div className="col">
         Navbar
-        <div class="row">
-          <div class="col-3">
+        <div className="row">
+          <div className="col-3">
              <Sidebar />
           </div>          
-          <div class="col">
+          <div className="col">
              Map
           </div>
         </div>
