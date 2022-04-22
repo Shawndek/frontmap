@@ -13,15 +13,16 @@ const Home = () => {
 
 
   return (
-    <div class="row">
-      <div class="col">
-        <Searchbar changeData={changeData}/>
-        <div class="row">
-          <div class="col-3">
-            <Sidebar />
-          </div>
-          <div class="col">
-            <Mapa />
+    <div className="row">
+      
+      <div className="col">
+        Navbar
+        <div className="row">
+          <div className="col-3">
+             <Sidebar />
+          </div>          
+          <div className="col">
+             Map
           </div>
         </div>
       </div>
